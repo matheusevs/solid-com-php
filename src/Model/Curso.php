@@ -4,7 +4,7 @@ namespace Alura\Solid\Model;
 
 use Feedback;
 
-class Curso
+class Curso implements Pontuavel
 {
     private $nome;
     private $videos;
@@ -35,5 +35,10 @@ class Curso
     public function recuperarVideos(): array
     {
         return $this->videos;
+    }
+
+    public function recuperarPontuacao(): int
+    {
+        return 100;
     }
 }
